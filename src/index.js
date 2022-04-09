@@ -1,9 +1,11 @@
 import React from 'react';
-import './style/index.css'
 import App from './views/App';
 import reportWebVitals from './tests/reportWebVitals'
-
 import { createRoot } from 'react-dom/client';
+
+import './style/index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "@icon/micon/micon.css";
 
 const container = document.getElementById('root')
 const root = createRoot(container)
