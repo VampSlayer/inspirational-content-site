@@ -21,9 +21,13 @@ class TileContent extends React.Component {
 		this.get()
 	}
 	async get() {
-		let feed = this.props.tile?.feed ? `?feeds=${this.props.tile?.feed}` : ""
 		const type = this.props.tile?.type
-		const url = `https://inspirational-content-api.herokuapp.com/${type}/${type.substring(0, type.length - 1)}${feed}`
+		if (!type) return
+		let feed = this.props.tile?.feed ? `?feeds=${this.props.tile?.feed}` : ""
+		const url = `https://inspirational-content-api.herokuapp.com/${type}/${type.substring(
+			0,
+			type.length - 1
+		)}${feed}`
 		const res = await fetch(url)
 		const json = await res.json()
 		this.setState({
@@ -94,12 +98,15 @@ class TileContent extends React.Component {
 				<Row className="content">
 					<Col className="d-flex justify-content-center">
 						<span onClick={() => this.settings()}>
-							{ this.getContentComponent(content) }
+							{this.getContentComponent(content)}
 						</span>
 					</Col>
 				</Row>
 				<Row>
-					<Col className="d-flex justify-content-center" onClick={() => this.get()}>
+					<Col
+						className="d-flex justify-content-center"
+						onClick={() => this.get()}
+					>
 						<i className="mi mi-Refresh" title="Refresh Inspiration" />
 					</Col>
 				</Row>

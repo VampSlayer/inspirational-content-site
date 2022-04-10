@@ -75,11 +75,23 @@ class FeedSelect extends React.Component {
 					</Col>
 				</Row>
 				<Row className="content">
-					<Col className="d-flex justify-content-center">
-						<h4 className="quote">Inspiration Source</h4>
-						<select value={this.props.tile.feed} onChange={(e) => this.set(e)}>
-							{this.getFeedOptions()}
-						</select>
+					<Col>
+						<Row>
+							<Col>
+								<h4>Inspiration Source</h4>
+							</Col>
+						</Row>
+						<Row>
+							<Col>
+								<select
+									className="feeds"
+									value={this.props.tile.feed}
+									onChange={(e) => this.set(e)}
+								>
+									{this.getFeedOptions()}
+								</select>
+							</Col>
+						</Row>
 					</Col>
 				</Row>
 				<Row>
