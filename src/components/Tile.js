@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col"
 import React from "react"
 
 import { connect } from "react-redux"
-import { decrement, increment } from "../slices/tileSlice"
+import { add, remove } from "../slices/tileSlice"
 
 import Mantra from "./Mantra"
 import Quote from "./Quote"
@@ -53,10 +53,17 @@ class Tile extends React.Component {
 		}
 	}
 	render() {
-		const firstAndOnly = this.props.firstAndOnly
-		const remove = this.props.remove
+		const showRemove = !(
+			this.props.tiles[this.props.tiles?.length - 1] === this.props.tile &&
+			this.props.tiles.length === 1
+		)
 		const id = this.props.tile?.id
-		const last = this.props.last
+		const remove = this.props.remove
+
+		const last =
+			this.props.tiles[this.props.tiles.length - 1] === this.props.tile
+		const allCount = this.props.tiles?.length
+		const showAdd = last && allCount !== 18
 		const add = this.props.add
 
 		const getContentComponent = this.getContentComponent.bind(this)
@@ -69,14 +76,14 @@ class Tile extends React.Component {
 				<Row>
 					<Col className="d-flex justify-content-between">
 						<span className="mt-1">
-							{!firstAndOnly && (
+							{showRemove && (
 								<i
 									className="mi mi-Remove"
 									title="Remove Inspiration"
 									onClick={() => remove(id)}
 								/>
 							)}
-							{last && (
+							{showAdd && (
 								<i
 									className="mi mi-Add"
 									title="Add Inspiration"
@@ -108,11 +115,13 @@ class Tile extends React.Component {
 	}
 }
 
+const mapStateToProps = (state) => ({ tiles: state.tile.value })
+
 const mapDispatchToProps = (dispatch) => {
 	return {
-		add: () => dispatch(increment()),
-		remove: (id) => dispatch(decrement({ id })),
+		add: () => dispatch(add()),
+		remove: (id) => dispatch(remove({ id })),
 	}
 }
 
-export default connect(null, mapDispatchToProps)(Tile)
+export default connect(mapStateToProps, mapDispatchToProps)(Tile)

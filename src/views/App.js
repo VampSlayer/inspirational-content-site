@@ -8,8 +8,6 @@ import Col from "react-bootstrap/Col"
 
 function App() {
 	const allTiles = useSelector((state) => state.tile.value)
-	const firstTileId = allTiles[0]?.id
-	const lastTileId = allTiles[allTiles.length - 1]?.id
 	const rows = [
 		allTiles.slice(0, 6),
 		allTiles.slice(6, 12),
@@ -19,12 +17,7 @@ function App() {
 	const getTiles = (tiles) =>
 		tiles.map((tile) => (
 			<Col key={`col-${tile.id}`}>
-				<Tile
-					key={`tile-${tile.id}`}
-					tile={tile}
-					firstAndOnly={firstTileId === tile.id && tiles.length === 1}
-					last={lastTileId === tile.id}
-				/>
+				<Tile key={`tile-${tile.id}`} tile={tile} />
 			</Col>
 		))
 

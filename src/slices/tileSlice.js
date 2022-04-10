@@ -11,12 +11,12 @@ export const tileSlice = createSlice({
 		})(), // https://advancedweb.hu/the-async-lazy-initializer-pattern-in-javascript/
 	},
 	reducers: {
-		increment: (state) => {
-			const id = uuidv4()
-			state.value.push({ id: id, type: "empty", feed: "" })
+		add: (state) => {
+			if (state.value.length === 18) return
+			state.value.push({ id: uuidv4(), type: "empty", feed: "" })
 			localStorage.setItem("tiles", JSON.stringify(state.value))
 		},
-		decrement: (state, action) => {
+		remove: (state, action) => {
 			const index = state.value.findIndex((x) => x.id === action.payload.id)
 			if (index === -1) return
 			state.value.splice(index, 1)
@@ -25,6 +25,6 @@ export const tileSlice = createSlice({
 	},
 })
 
-export const { increment, decrement } = tileSlice.actions
+export const { add, remove } = tileSlice.actions
 
 export default tileSlice.reducer
