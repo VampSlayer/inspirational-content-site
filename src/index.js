@@ -12,6 +12,7 @@ import App from "./views/App"
 import "./style/index.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "@icon/micon/micon.css"
+import "animate.css"
 
 const container = document.getElementById("root")
 const root = createRoot(container)
