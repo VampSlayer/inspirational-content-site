@@ -1,12 +1,14 @@
 body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; background: #333 !important; color: azure !important; overflow-y: hidden; }
 
-.tile { user-select:none; border: 1px solid azure; margin: 2vh; border-radius: 10px; }
+.tile { background: rgb(55, 55, 55); user-select:none; border: 1px solid azure; margin: 2vh; border-radius: 10px; }
   .tile .mi { font-size: 12px; margin: 0.5vh; cursor: pointer; }
   .tile .content { margin-top: 17%; margin-bottom: 17%; }
 
-.mantra { font-size: 7em; overflow-wrap: break-word; text-align: center; }
+.mantra { font-size: 4vh; overflow-wrap: break-word; text-align: center; }
 
 .quote { text-align: center; margin-left: 0.5vw; margin-right: 0.5vw; }
   .quote .content { font-size: 1.75vh; overflow-wrap: break-word; }
   .quote .source { font-size: 1vh; }
+
+.empty { cursor: pointer; }
