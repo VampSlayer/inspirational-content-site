@@ -1,7 +1,5 @@
 function Mantra(props) {
-    return (
-        <span className="mantra"> {props.content.mantra} </span>
-    );
+	return <span className="mantra"> {props.content.mantra} </span>
 }
 
-export default Mantra;
+export default Mantra

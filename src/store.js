@@ -1,9 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit"
 
-import tileReducer from './slices/tileSlice'
+import tileReducer from "./slices/tileSlice"
 
 export default configureStore({
-  reducer: {
-      tile: tileReducer
-  },
+	reducer: {
+		tile: tileReducer,
+	},
 })
