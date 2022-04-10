@@ -27,7 +27,25 @@ function App() {
 				row.length > 0 && <Row key={`row-${index}`}>{getTiles(row)}</Row>
 		)
 
-	return <Container fluid>{getRows(rows)}</Container>
+	return (
+		<Container fluid>
+			<Row>
+				<Col className="d-flex justify-content-center">
+					<span className="heading">
+						Inspire <i className="mi mi-Lightbulb" /> Me <span className="by-me">by VampSlayer aka Sayam Hussain</span>
+					</span>
+				</Col>
+			</Row>
+			{getRows(rows)}
+			<Row>
+				<Col className="d-flex justify-content-center">
+					<span className="by-me">
+						<a href="https://github.com/VampSlayer/inspirational-content-site">Check it out on GitHub</a>
+					</span>
+				</Col>
+			</Row>
+		</Container>
+	)
 }
 
 export default App

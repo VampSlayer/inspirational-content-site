@@ -23,7 +23,7 @@ class TypeSelect extends React.Component {
 	}
 	render() {
 		return (
-			<Container fluid className="tile">
+			<Container className="tile">
 				<Row>
 					<Col className="d-flex justify-content-end">
 						<span className="mt-1">

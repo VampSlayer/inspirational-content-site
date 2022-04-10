@@ -1,11 +1,14 @@
 body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-		-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; background: #333 !important; color: azure !important; overflow-y: hidden; }
+		-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; background: #000 !important; color: azure !important; overflow-y: hidden; }
 
-.tile { background: rgb(55, 55, 55); user-select:none; border: 1px solid azure; margin: 2vh; border-radius: 10px; }
+.heading { padding-top: 8px; font-size: 24px; text-align: center; }
+	.heading .by-me { color: azure; font-size: 8px; }
+
+.tile { user-select:none; border: 1px solid azure; margin: 2vh; border-radius: 1px; }
 	.tile .mi { font-size: 12px; margin: 0.5vh; cursor: pointer; }
-	.tile .content { margin-top: 17%; margin-bottom: 17%; text-align: center; overflow-wrap: break-word;  }
-		.tile .content button { font-size: 2.2vh; background: transparent; margin: 0.2vw; color: azure; border: 1px solid azure; }
-			.tile .content button:hover { background: azure; color: #333; }
+	.tile .content { margin-top: 17%; margin-bottom: 17%; text-align: center; overflow-wrap: break-word; font-weight: bold; }
+		.tile .content button { font-size: 2.2vh; background: transparent; margin: 0.2vw; color: azure; border: 1px solid azure; font-weight: normal; }
+			.tile .content button:hover { background: azure; color: #000; }
 			.tile .content button:focus { box-shadow: 0 0 0 0.25rem azure; }
 
 .mantra { font-size: 4vh; cursor: pointer; }
@@ -16,4 +19,8 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'R
 
 .empty { cursor: pointer; }
 
-.feeds { width: 25%; cursor: pointer; }
+.feeds { width: 25%; cursor: pointer; font-weight: normal; }
+
+.by-me { }
+	.by-me a { color: rgb(142, 153, 153); font-size: 8px; text-decoration: none; }
+	.by-me a:hover { color: azure; }

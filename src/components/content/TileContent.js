@@ -57,6 +57,7 @@ class TileContent extends React.Component {
 		)
 		const id = this.props.tile?.id
 		const remove = this.props.remove
+		const type = this.props.tile?.type
 
 		const last =
 			this.props.tiles[this.props.tiles.length - 1] === this.props.tile
@@ -67,7 +68,7 @@ class TileContent extends React.Component {
 		const content = this.state.content
 
 		return (
-			<Container fluid className="tile">
+			<Container className="tile">
 				<Row>
 					<Col className="d-flex justify-content-between">
 						<span className="mt-1">
@@ -102,14 +103,16 @@ class TileContent extends React.Component {
 						</span>
 					</Col>
 				</Row>
-				<Row>
-					<Col
-						className="d-flex justify-content-center"
-						onClick={() => this.get()}
-					>
-						<i className="mi mi-Refresh" title="Refresh Inspiration" />
-					</Col>
-				</Row>
+				{type && (
+					<Row>
+						<Col
+							className="d-flex justify-content-center"
+							onClick={() => this.get()}
+						>
+							<i className="mi mi-Refresh" title="Refresh Inspiration" />
+						</Col>
+					</Row>
+				)}
 			</Container>
 		)
 	}
