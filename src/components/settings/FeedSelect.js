@@ -57,15 +57,15 @@ class FeedSelect extends React.Component {
 		return (
 			<Container className="tile">
 				<Row>
-					<Col className="d-flex justify-content-between">
-						<span className="mt-1">
+					<Col>
+						<span className="left-top-button">
 							<i
 								className="mi mi-Back"
 								title="Back To Inspiration Type"
 								onClick={() => this.back()}
 							/>
 						</span>
-						<span className="mt-1">
+						<span className="right-top-button">
 							<i
 								className="mi mi-ChromeClose"
 								title="Close Choosing Inspiration"
@@ -74,11 +74,11 @@ class FeedSelect extends React.Component {
 						</span>
 					</Col>
 				</Row>
-				<Row className="content">
+				<Row className="content feed-select">
 					<Col>
 						<Row>
 							<Col>
-								<h4>Inspiration Source</h4>
+								<span className="sub-heading">Inspiration Source</span>
 							</Col>
 						</Row>
 						<Row>
@@ -95,7 +95,7 @@ class FeedSelect extends React.Component {
 					</Col>
 				</Row>
 				<Row>
-					<Col className="d-flex justify-content-center">
+					<Col className="bottom-button">
 						<i
 							className="mi mi-Save"
 							title="Save Inspiration Source"

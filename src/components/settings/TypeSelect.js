@@ -25,8 +25,8 @@ class TypeSelect extends React.Component {
 		return (
 			<Container className="tile">
 				<Row>
-					<Col className="d-flex justify-content-end">
-						<span className="mt-1">
+					<Col>
+						<span className="right-top-button">
 							<i
 								className="mi mi-ChromeClose"
 								title="Close Choosing Inspiration"
@@ -36,7 +36,7 @@ class TypeSelect extends React.Component {
 					</Col>
 				</Row>
 				<Row className="content">
-					<Col className="d-flex justify-content-center">
+					<Col>
 						<Button onClick={() => this.set("mantras")}>Mantra</Button>
 						<Button onClick={() => this.set("quotes")}>Quote</Button>
 					</Col>

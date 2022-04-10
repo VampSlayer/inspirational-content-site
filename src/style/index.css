@@ -4,23 +4,47 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'R
 .heading { padding-top: 8px; font-size: 24px; text-align: center; }
 	.heading .by-me { color: azure; font-size: 8px; }
 
-.tile { user-select:none; border: 1px solid azure; margin: 2vh; border-radius: 1px; }
-	.tile .mi { font-size: 12px; margin: 0.5vh; cursor: pointer; }
-	.tile .content { margin-top: 17%; margin-bottom: 17%; text-align: center; overflow-wrap: break-word; font-weight: bold; }
+.tile { user-select:none; border: 1px solid azure; margin: 2vh; border-radius: 1px; position: relative; }
+	.tile .mi { cursor: pointer; padding: 8px; }
+	.tile .content { margin-left: 8px; margin-right: 8px; text-align: center; overflow-wrap: break-word; font-weight: bold; margin: 0; position: absolute; top: 50%; right: 0; left: 0; transform: translateY(-50%); }
 		.tile .content button { font-size: 2.2vh; background: transparent; margin: 0.2vw; color: azure; border: 1px solid azure; font-weight: normal; }
 			.tile .content button:hover { background: azure; color: #000; }
 			.tile .content button:focus { box-shadow: 0 0 0 0.25rem azure; }
+	.tile .left-top-button { text-align: center; position: absolute; top: 0; left: 0; padding: 8px; }
+	.tile .right-top-button { text-align: center; position: absolute; top: 0; right: 0; padding: 8px; }
+	.tile .bottom-button { text-align: center; position: absolute; bottom: 0; right: 0; left: 0; padding: 8px; }
 
-.mantra { font-size: 4vh; cursor: pointer; }
+.mantra { cursor: pointer; }
 
-.quote { margin-left: 0.5vw; margin-right: 0.5vw; cursor: pointer; }
-	.quote .content { font-size: 1.75vh; }
-	.quote .source { font-size: 1vh; }
+.quote { cursor: pointer; }
+	.quote .content { }
+	.quote .source { }
 
 .empty { cursor: pointer; }
 
-.feeds { width: 25%; cursor: pointer; font-weight: normal; }
+.feed-select {}
+	.feed-select .sub-heading {}
+	.feed-select .feeds { cursor: pointer; font-weight: normal; }
 
 .by-me { }
 	.by-me a { color: rgb(142, 153, 153); font-size: 8px; text-decoration: none; }
 	.by-me a:hover { color: azure; }
+
+.tile-0 { }
+		.tile-0 .tile .mi { font-size: 2em; }
+		.tile-0 .mantra { font-size: 4em; }
+		.tile-0 .empty { font-size: 4em; }
+
+.tile-1 { }
+
+.tile-2 { }
+
+.tile-3 { }
+
+.tile-4 { }
+
+.tile-5 { }
+
+.row-1 .tile { height: 88vh; }
+.row-2 .tile { height: 42vh; }
+.row-3 .tile { height: 26.7vh; }

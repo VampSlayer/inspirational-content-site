@@ -70,8 +70,8 @@ class TileContent extends React.Component {
 		return (
 			<Container className="tile">
 				<Row>
-					<Col className="d-flex justify-content-between">
-						<span className="mt-1">
+					<Col>
+						<span className="left-top-button">
 							{showRemove && (
 								<i
 									className="mi mi-Remove"
@@ -87,7 +87,7 @@ class TileContent extends React.Component {
 								/>
 							)}
 						</span>
-						<span className="mt-1">
+						<span className="right-top-button">
 							<i
 								className="mi mi-Settings"
 								title="Configure Inspiration"
@@ -97,7 +97,7 @@ class TileContent extends React.Component {
 					</Col>
 				</Row>
 				<Row className="content">
-					<Col className="d-flex justify-content-center">
+					<Col>
 						<span onClick={() => this.settings()}>
 							{this.getContentComponent(content)}
 						</span>
@@ -105,10 +105,7 @@ class TileContent extends React.Component {
 				</Row>
 				{type && (
 					<Row>
-						<Col
-							className="d-flex justify-content-center"
-							onClick={() => this.get()}
-						>
+						<Col className="bottom-button" onClick={() => this.get()}>
 							<i className="mi mi-Refresh" title="Refresh Inspiration" />
 						</Col>
 					</Row>
