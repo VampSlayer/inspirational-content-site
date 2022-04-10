@@ -16,9 +16,9 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'R
 
 .mantra { cursor: pointer; }
 
-.quote { cursor: pointer; }
-	.quote .content { }
-	.quote .source { }
+.quotes { cursor: pointer; }
+	.quotes .quote { }
+	.quotes .source { text-align: center; position: absolute; right: 0; left: 0; font-weight: normal; }
 
 .empty { cursor: pointer; }
 
@@ -31,19 +31,44 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'R
 	.by-me a:hover { color: azure; }
 
 .tile-0 { }
-		.tile-0 .tile .mi { font-size: 2em; }
-		.tile-0 .mantra { font-size: 4em; }
-		.tile-0 .empty { font-size: 4em; }
+	.tile-0 .tile .mi { font-size: 1.75em; }
+	.tile-0 .mantra { font-size: 3.5em; }
+	.tile-0 .quotes .quote { font-size: 1.75em; }
+	.tile-0 .quotes .source { font-size: 1.25em; }
+	.tile-0 .empty { font-size: 3.5em; }
 
 .tile-1 { }
+	.tile-1 .tile .mi { font-size: 1.75em; }
+	.tile-1 .mantra { font-size: 3.5em; }
+	.tile-1 .quotes .quote { font-size: 1.75em; }
+	.tile-1 .quotes .source { font-size: 1.25em; }
+	.tile-1 .empty { font-size: 3.5em; }
 
 .tile-2 { }
+	.tile-2 .tile .mi { font-size: 1.75em; }
+	.tile-2 .mantra { font-size: 2.5em; }
+	.tile-2 .quotes .quote { font-size: 1.75em; }
+	.tile-2 .quotes .source { font-size: 1.25em; }
+	.tile-2 .empty { font-size: 2.5em; }
 
 .tile-3 { }
+	.tile-3 .tile .mi { font-size: 1.5em; }
+	.tile-3 .mantra { font-size: 2.5em; }
+	.tile-3 .quotes .quote { font-size: 1.25em; }
+	.tile-3 .quotes .source { font-size: 0.75em; }
+	.tile-3 .empty { font-size: 1.75em; }
 
 .tile-4 { }
+	.tile-4 .tile .mi { font-size: 1.25em; }
+	.tile-4 .mantra { font-size: 1.75em; }
+	.tile-4 .quotes .quote { font-size: 1em; }
+	.tile-4 .quotes .source { font-size: 0.75em; }
+	.tile-4 .empty { font-size: 1.25em; }
 
 .tile-5 { }
+	.tile-5 .mantra { font-size: 1.5em; }
+	.tile-5 .quotes .quote { font-size: 1em; }
+	.tile-5 .quotes .source { font-size: 0.75em; }
 
 .row-1 .tile { height: 88vh; }
 .row-2 .tile { height: 42vh; }

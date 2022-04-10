@@ -55,7 +55,7 @@ class FeedSelect extends React.Component {
 	}
 	render() {
 		return (
-			<Container className="tile">
+			<Container fluid className="tile">
 				<Row>
 					<Col>
 						<span className="left-top-button">

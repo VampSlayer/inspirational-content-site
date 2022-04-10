@@ -68,7 +68,7 @@ class TileContent extends React.Component {
 		const content = this.state.content
 
 		return (
-			<Container className="tile">
+			<Container fluid className="tile">
 				<Row>
 					<Col>
 						<span className="left-top-button">

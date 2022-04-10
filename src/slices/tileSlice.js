@@ -7,7 +7,7 @@ export const tileSlice = createSlice({
 		value: (() => {
 			return localStorage.getItem("tiles")
 				? JSON.parse(localStorage.getItem("tiles"))
-				: [{ id: uuidv4(), type: null, feed: null, setting: true }]
+				: [{ id: uuidv4(), type: null, feed: null, setting: false }]
 		})(), // https://advancedweb.hu/the-async-lazy-initializer-pattern-in-javascript/
 	},
 	reducers: {
